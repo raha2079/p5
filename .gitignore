@@ -1,0 +1,48 @@
+# Build directories
+build/
+cmake-build-*/
+*.dSYM/
+
+# C++ compiled objects and executables
+*.o
+*.so
+*.a
+*.dylib
+*.out
+*.exe
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+*.egg-info/
+dist/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Generated experiment outputs
+runs/
+output/
+results/
+*.graph
+*.states
+*.csv
+*.png
+*.pdf
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Keep example fixtures for tests
+!tests/fixtures/
+!config/examples/

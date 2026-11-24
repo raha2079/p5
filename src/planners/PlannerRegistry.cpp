@@ -16,9 +16,18 @@ PlannerRegistry::PlannerRegistry() {
 }
 
 void PlannerRegistry::registerStandardPlanners() {
-    // RRT
+    // RRT (default range, not suitable for protein folding)
     registerPlanner("RRT", [](const ob::SpaceInformationPtr& si) -> ob::PlannerPtr {
         return std::make_shared<og::RRT>(si);
+    });
+
+    // RRT Baseline for protein folding (proper range tuning)
+    // Section 8: Range must be ~0.35-0.50 rad to avoid 100% clashes
+    // Default OMPL RRT range is 11.3 rad, which is way too large!
+    registerPlanner("RRT_Baseline", [](const ob::SpaceInformationPtr& si) -> ob::PlannerPtr {
+        auto rrt = std::make_shared<og::RRT>(si);
+        rrt->setRange(0.40);  // 0.40 rad ≈ 23° per step (middle of 0.35-0.50 range)
+        return rrt;
     });
 
     // RRTConnect

@@ -39,7 +39,7 @@ void runExportTests() {
     };
 
     auto validator = std::make_shared<ProbabilisticMotionValidator>(
-        si, testEnergy, 8, 300.0, 1.380649e-23);
+        si, testEnergy, 8, 1.0);
 
     si->setMotionValidator(validator);
     si->setup();

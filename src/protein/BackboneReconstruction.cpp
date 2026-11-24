@@ -1,142 +1,163 @@
 #include "protein/BackboneReconstruction.h"
 #include "core/ProteinStateSpace.h"
 #include <cmath>
+#include <Eigen/Dense>
+#include <Eigen/Geometry>
+
+using namespace Eigen;
+
+// Wrap angle to [-π, π]
+static double wrapToPi(double angle) {
+    while (angle > M_PI) angle -= 2.0 * M_PI;
+    while (angle < -M_PI) angle += 2.0 * M_PI;
+    return angle;
+}
 
 BackboneReconstruction::BackboneReconstruction(const ProteinStructure& reference)
     : reference_(reference) {
-    // Extract geometry from reference if available, otherwise use defaults
-    // For now, use standard geometry
+    // Extract reference geometry from first few residues if available
+    if (reference.residues.size() >= 2) {
+        const Atom* n0 = reference.getBackboneAtom(0, "N");
+        const Atom* ca0 = reference.getBackboneAtom(0, "CA");
+        const Atom* c0 = reference.getBackboneAtom(0, "C");
+        const Atom* o0 = reference.getBackboneAtom(0, "O");
+        const Atom* n1 = reference.getBackboneAtom(1, "N");
+
+        if (n0 && ca0 && c0 && o0 && n1) {
+            Vec3 v_nca = ca0->position - n0->position;
+            Vec3 v_cac = c0->position - ca0->position;
+            Vec3 v_co = o0->position - c0->position;
+            Vec3 v_cn = n1->position - c0->position;
+
+            geometry_.N_CA_length = v_nca.norm();
+            geometry_.CA_C_length = v_cac.norm();
+            geometry_.C_O_length = v_co.norm();
+            geometry_.C_N_length = v_cn.norm();
+        }
+    }
 }
 
 Vec3 BackboneReconstruction::rotateAroundAxis(
     const Vec3& point, const Vec3& axis, double angle) const {
-
-    // Rodrigues' rotation formula
     Vec3 k = axis.normalized();
     double cosA = std::cos(angle);
     double sinA = std::sin(angle);
-
-    Vec3 result = point * cosA +
-                  k.cross(point) * sinA +
-                  k * (k.dot(point)) * (1.0 - cosA);
-
+    Vec3 result = point * cosA + k.cross(point) * sinA + k * (k.dot(point)) * (1.0 - cosA);
     return result;
 }
 
 std::vector<Atom> BackboneReconstruction::reconstruct(
-    const ob::State* state,
-    int numResidues) const {
-
-    // TODO: Extract phi/psi from OMPL state properly
-    // This requires accessing the ProteinStateSpace which created the state
-    // For now, return reconstruction from reference angles
+    const ob::State* state, int numResidues) const {
+    // Extract phi/psi from OMPL state using ProteinStateSpace
+    if (!stateSpace_) {
+        throw std::runtime_error("State space not set - call setStateSpace() first");
+    }
 
     std::vector<double> phi(numResidues, 0.0);
     std::vector<double> psi(numResidues, 0.0);
-
-    // Use reference angles as placeholder
-    for (int i = 0; i < numResidues && i < (int)reference_.residues.size(); ++i) {
-        phi[i] = reference_.residues[i].phi;
-        psi[i] = reference_.residues[i].psi;
+    for (int i = 0; i < numResidues; ++i) {
+        phi[i] = stateSpace_->getPhi(state, i);
+        psi[i] = stateSpace_->getPsi(state, i);
     }
-
     return reconstruct(phi, psi, numResidues);
 }
 
+// Sequential rigid-body torsion rotation on reference coordinates
 std::vector<Atom> BackboneReconstruction::reconstruct(
-    const std::vector<double>& phi,
-    const std::vector<double>& psi,
+    const std::vector<double>& target_phi,
+    const std::vector<double>& target_psi,
     int numResidues) const {
 
-    std::vector<Atom> atoms;
-    atoms.reserve(numResidues * 4);  // N, CA, C, O per residue
-
-    // Start from reference first residue
-    if (reference_.residues.empty()) {
-        throw std::runtime_error("Reference structure has no residues");
+    if (numResidues > (int)reference_.residues.size()) {
+        throw std::runtime_error("Cannot reconstruct more residues than in reference");
     }
 
-    // Place first residue from reference
-    const Residue& firstRes = reference_.residues[0];
-    const Atom* refN = reference_.getBackboneAtom(0, "N");
-    const Atom* refCA = reference_.getBackboneAtom(0, "CA");
-    const Atom* refC = reference_.getBackboneAtom(0, "C");
-    const Atom* refO = reference_.getBackboneAtom(0, "O");
+    // Start with reference 1UAO model 1 backbone coordinates
+    std::vector<Vector3d> N(numResidues), CA(numResidues), C(numResidues), O(numResidues);
+    std::vector<double> ref_phi(numResidues, 0.0), ref_psi(numResidues, 0.0);
 
-    if (!refN || !refCA || !refC) {
-        throw std::runtime_error("Reference structure missing backbone atoms");
-    }
+    for (int i = 0; i < numResidues; ++i) {
+        const Atom* n_atom = reference_.getBackboneAtom(i, "N");
+        const Atom* ca_atom = reference_.getBackboneAtom(i, "CA");
+        const Atom* c_atom = reference_.getBackboneAtom(i, "C");
+        const Atom* o_atom = reference_.getBackboneAtom(i, "O");
 
-    // First residue: use reference coordinates
-    atoms.push_back(Atom("N", "N", refN->position, 0));
-    atoms.push_back(Atom("CA", "C", refCA->position, 0));
-    atoms.push_back(Atom("C", "C", refC->position, 0));
-    if (refO) {
-        atoms.push_back(Atom("O", "O", refO->position, 0));
-    }
-
-    // Build subsequent residues using torsion angles
-    for (int i = 1; i < numResidues; ++i) {
-        // Get previous C, CA, N
-        Vec3 C_prev = atoms[(i-1)*4 + 2].position;  // Previous C
-        Vec3 CA_prev = atoms[(i-1)*4 + 1].position; // Previous CA
-        Vec3 N_prev = atoms[(i-1)*4 + 0].position;  // Previous N
-
-        // Place N using omega (peptide bond torsion)
-        Vec3 bond_CA_C = (C_prev - CA_prev).normalized();
-        Vec3 N_pos = C_prev + bond_CA_C * geometry_.C_N_length;
-
-        // Apply omega rotation
-        Vec3 axis = bond_CA_C;
-        Vec3 N_initial = N_pos;
-        N_pos = C_prev + rotateAroundAxis(N_initial - C_prev, axis, geometry_.omega);
-
-        // Place CA using reference geometry
-        Vec3 bond_C_N = (N_pos - C_prev).normalized();
-        Vec3 CA_direction = bond_C_N;
-
-        // Apply N-CA-C angle
-        // This is simplified; full implementation would use proper dihedral placement
-        Vec3 CA_pos = N_pos + CA_direction * geometry_.N_CA_length;
-
-        // Place C using psi angle (if not C-terminal)
-        Vec3 C_pos;
-        if (i < numResidues - 1) {
-            // Use psi[i-1] to place C of residue i
-            Vec3 bond_N_CA = (CA_pos - N_pos).normalized();
-            C_pos = CA_pos + bond_N_CA * geometry_.CA_C_length;
-
-            // Apply psi rotation
-            if (i > 1) {
-                // Rotate around N-CA bond by psi angle
-                C_pos = CA_pos + rotateAroundAxis(C_pos - CA_pos, bond_N_CA, psi[i-1]);
-            }
-        } else {
-            // C-terminal: use reference or simple placement
-            Vec3 bond_N_CA = (CA_pos - N_pos).normalized();
-            C_pos = CA_pos + bond_N_CA * geometry_.CA_C_length;
+        if (!n_atom || !ca_atom || !c_atom || !o_atom) {
+            throw std::runtime_error("Reference missing backbone atoms for residue " + std::to_string(i));
         }
 
-        // Place O
-        Vec3 bond_CA_C_2 = (C_pos - CA_pos).normalized();
-        Vec3 O_pos = C_pos + bond_CA_C_2 * geometry_.C_O_length;
+        N[i] = Vector3d(n_atom->position.x, n_atom->position.y, n_atom->position.z);
+        CA[i] = Vector3d(ca_atom->position.x, ca_atom->position.y, ca_atom->position.z);
+        C[i] = Vector3d(c_atom->position.x, c_atom->position.y, c_atom->position.z);
+        O[i] = Vector3d(o_atom->position.x, o_atom->position.y, o_atom->position.z);
 
-        // Add atoms
-        atoms.push_back(Atom("N", "N", N_pos, i));
-        atoms.push_back(Atom("CA", "C", CA_pos, i));
-        atoms.push_back(Atom("C", "C", C_pos, i));
-        atoms.push_back(Atom("O", "O", O_pos, i));
+        ref_phi[i] = reference_.residues[i].phi;
+        ref_psi[i] = reference_.residues[i].psi;
+    }
+
+    // Apply sequential rigid-body rotations for each active torsion
+    for (int i = 0; i < numResidues; ++i) {
+        // Active phi[i] (i > 0)
+        if (i > 0 && i < (int)target_phi.size()) {
+            double delta_phi = wrapToPi(target_phi[i] - ref_phi[i]);
+
+            if (std::abs(delta_phi) > 1e-6) {
+                Vector3d axis = (CA[i] - N[i]).normalized();
+                Vector3d pivot = CA[i];
+                AngleAxisd rotation(delta_phi, axis);
+
+                // Rotate C[i], O[i], and all atoms of residues j > i
+                C[i] = rotation * (C[i] - pivot) + pivot;
+                O[i] = rotation * (O[i] - pivot) + pivot;
+
+                for (int j = i + 1; j < numResidues; ++j) {
+                    N[j] = rotation * (N[j] - pivot) + pivot;
+                    CA[j] = rotation * (CA[j] - pivot) + pivot;
+                    C[j] = rotation * (C[j] - pivot) + pivot;
+                    O[j] = rotation * (O[j] - pivot) + pivot;
+                }
+            }
+        }
+
+        // Active psi[i] (i < N-1)
+        if (i < numResidues - 1 && i < (int)target_psi.size()) {
+            double delta_psi = wrapToPi(target_psi[i] - ref_psi[i]);
+
+            if (std::abs(delta_psi) > 1e-6) {
+                Vector3d axis = (C[i] - CA[i]).normalized(); // Use UPDATED coords
+                Vector3d pivot = C[i];
+                AngleAxisd rotation(delta_psi, axis);
+
+                // Rotate O[i] and all atoms of residues j > i
+                O[i] = rotation * (O[i] - pivot) + pivot;
+
+                for (int j = i + 1; j < numResidues; ++j) {
+                    N[j] = rotation * (N[j] - pivot) + pivot;
+                    CA[j] = rotation * (CA[j] - pivot) + pivot;
+                    C[j] = rotation * (C[j] - pivot) + pivot;
+                    O[j] = rotation * (O[j] - pivot) + pivot;
+                }
+            }
+        }
+    }
+
+    // Convert to Atom format
+    std::vector<Atom> atoms;
+    atoms.reserve(numResidues * 4);
+
+    for (int i = 0; i < numResidues; ++i) {
+        atoms.push_back(Atom("N", "N", Vec3(N[i][0], N[i][1], N[i][2]), i));
+        atoms.push_back(Atom("CA", "C", Vec3(CA[i][0], CA[i][1], CA[i][2]), i));
+        atoms.push_back(Atom("C", "C", Vec3(C[i][0], C[i][1], C[i][2]), i));
+        atoms.push_back(Atom("O", "O", Vec3(O[i][0], O[i][1], O[i][2]), i));
     }
 
     return atoms;
 }
 
 double BackboneReconstruction::computeTotalBondPathLength() const {
-    // Sum of all backbone bond lengths from first to last CA
     int n = reference_.size();
     if (n == 0) return 0.0;
-
-    // Conservative estimate: (n-1) peptides × (CA-C + C-N + N-CA)
     double peptideLength = geometry_.CA_C_length + geometry_.C_N_length + geometry_.N_CA_length;
     return (n - 1) * peptideLength + geometry_.N_CA_length;
 }

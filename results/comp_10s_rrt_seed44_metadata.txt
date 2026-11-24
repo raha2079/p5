@@ -1,0 +1,29 @@
+# Experiment Metadata
+# Generated: 1795530177
+
+[Configuration]
+planner_name = RRT_Baseline
+pdb_path = data/1UAO.pdb
+chain_id = A
+model_number = 1
+max_iterations = 100000
+wall_clock_budget_seconds = 10
+exclude_1_4_neighbors = false
+radii_scale_factor = 1
+tau = 0.1
+random_seed = 44
+
+[Results]
+wall_clock_time_seconds = 10.0033
+iterations_completed = 384
+num_states = 384
+num_leaf_cells = 0
+total_attempts = 384
+accepted_states = 383
+acceptance_rate = 0.997396
+min_energy = -1.76791
+median_energy = -1.25108
+max_energy = -0.460318
+diversity_score = 384
+exploration_efficiency = 38.3871
+planner_data_file = results/comp_10s_rrt_seed44_data.bin

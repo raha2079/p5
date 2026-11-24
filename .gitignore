@@ -25,15 +25,20 @@ dist/
 .pytest_cache/
 .ipynb_checkpoints/
 
-# Generated experiment outputs
+# Generated experiment outputs (but keep initial report-ready results)
 runs/
 output/
-results/
 *.graph
 *.states
-*.csv
-*.png
-*.pdf
+
+# Backup and temporary files
+*.backup
+*.bak
+*_broken.cpp
+*_correct.cpp
+*_fixed.cpp
+*_v2.cpp
+*~
 
 # IDE and editor files
 .vscode/

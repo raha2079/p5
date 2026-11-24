@@ -1,0 +1,1760 @@
+================================
+Running All 9 Controlled Experiments
+τ = 0.10 (frozen)
+Wall-clock budget: 60 seconds each
+Total estimated time: ~10 minutes
+================================
+
+=========================================
+Running: rrt seed=42
+=========================================
+Protein Folding - Experiment Runner
+====================================
+
+
+=== Running Experiment ===
+Planner: RRT_Baseline
+Seed: 42
+Wall-clock budget: 60 seconds
+Loaded protein: 10 residues
+  PDB ID: 1UAO, Chain: A, Model: 1
+Planner setup complete
+Starting planning...
+Info:    RRT: Starting planning with 1 states already in datastructure
+Info:    RRT: Created 931 states
+Planning completed in 1.2465 seconds
+Status: Success
+
+Results:
+  States: 931
+  Iterations: 931
+  Acceptance rate: 99.8926%
+  Min energy: 0
+  Efficiency: 746.894 states/sec
+
+Saving planner data to results/rrt_seed42_data.bin...
+  Verified: 931 vertices loaded
+Metadata saved to results/rrt_seed42_metadata.txt
+
+=== Experiment Complete ===
+Output files:
+  Planner data: results/rrt_seed42_data.bin
+  Metadata: results/rrt_seed42_metadata.txt
+
+=========================================
+Running: rrt seed=43
+=========================================
+Protein Folding - Experiment Runner
+====================================
+
+
+=== Running Experiment ===
+Planner: RRT_Baseline
+Seed: 43
+Wall-clock budget: 60 seconds
+Loaded protein: 10 residues
+  PDB ID: 1UAO, Chain: A, Model: 1
+Planner setup complete
+Starting planning...
+Info:    RRT: Starting planning with 1 states already in datastructure
+Info:    RRT: Created 1133 states
+Planning completed in 1.5207 seconds
+Status: Success
+
+Results:
+  States: 1133
+  Iterations: 1133
+  Acceptance rate: 99.9117%
+  Min energy: 0
+  Efficiency: 745.049 states/sec
+
+Saving planner data to results/rrt_seed43_data.bin...
+  Verified: 1133 vertices loaded
+Metadata saved to results/rrt_seed43_metadata.txt
+
+=== Experiment Complete ===
+Output files:
+  Planner data: results/rrt_seed43_data.bin
+  Metadata: results/rrt_seed43_metadata.txt
+
+=========================================
+Running: rrt seed=44
+=========================================
+Protein Folding - Experiment Runner
+====================================
+
+
+=== Running Experiment ===
+Planner: RRT_Baseline
+Seed: 44
+Wall-clock budget: 60 seconds
+Loaded protein: 10 residues
+  PDB ID: 1UAO, Chain: A, Model: 1
+Planner setup complete
+Starting planning...
+Info:    RRT: Starting planning with 1 states already in datastructure
+Info:    RRT: Created 1340 states
+Planning completed in 1.79377 seconds
+Status: Success
+
+Results:
+  States: 1340
+  Iterations: 1340
+  Acceptance rate: 99.9254%
+  Min energy: 0
+  Efficiency: 747.028 states/sec
+
+Saving planner data to results/rrt_seed44_data.bin...
+  Verified: 1340 vertices loaded
+Metadata saved to results/rrt_seed44_metadata.txt
+
+=== Experiment Complete ===
+Output files:
+  Planner data: results/rrt_seed44_data.bin
+  Metadata: results/rrt_seed44_metadata.txt
+
+=========================================
+Running: quadtree_no_energy seed=42
+=========================================
+Protein Folding - Experiment Runner
+====================================
+
+
+=== Running Experiment ===
+Planner: QuadtreePlanner
+Seed: 42
+Wall-clock budget: 60 seconds
+Loaded protein: 10 residues
+  PDB ID: 1UAO, Chain: A, Model: 1
+Info:    QuadtreePlanner: Physical bounds - R_ee: [0.00, 40.41] Å, Rg: [4.24, 11.67] Å
+Info:    QuadtreePlanner: Added start state with energy -1.50 at projection (6.61, 4.66)
+Planner setup complete
+Starting planning...
+Debug:   QuadtreePlanner: Iteration 100, 101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 200, 201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 300, 301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 400, 401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 500, 501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 600, 601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 700, 701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 800, 801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 900, 901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 1000, 1001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 1100, 1101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 1200, 1201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 1300, 1301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 1400, 1401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 1500, 1501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 1600, 1601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 1700, 1701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 1800, 1801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 1900, 1901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 2000, 2001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 2100, 2101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 2200, 2201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 2300, 2301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 2400, 2401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 2500, 2501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 2600, 2601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 2700, 2701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 2800, 2801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 2900, 2901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 3000, 3001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 3100, 3101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 3200, 3201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 3300, 3301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 3400, 3401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 3500, 3501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 3600, 3601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 3700, 3701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 3800, 3801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 3900, 3901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 4000, 4001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 4100, 4101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 4200, 4201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 4300, 4301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 4400, 4401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 4500, 4501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 4600, 4601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 4700, 4701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 4800, 4801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 4900, 4901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 5000, 5001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 5100, 5101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 5200, 5201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 5300, 5301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 5400, 5401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 5500, 5501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 5600, 5601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 5700, 5701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 5800, 5801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 5900, 5901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 6000, 6001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 6100, 6101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 6200, 6201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 6300, 6301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 6400, 6401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 6500, 6501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 6600, 6601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 6700, 6701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 6800, 6801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 6900, 6901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 7000, 7001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 7100, 7101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 7200, 7201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 7300, 7301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 7400, 7401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 7500, 7501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 7600, 7601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 7700, 7701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 7800, 7801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 7900, 7901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 8000, 8001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 8100, 8101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 8200, 8201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 8300, 8301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 8400, 8401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 8500, 8501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 8600, 8601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 8700, 8701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 8800, 8801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 8900, 8901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 9000, 9001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 9100, 9101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 9200, 9201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 9300, 9301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 9400, 9401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 9500, 9501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 9600, 9601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 9700, 9701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 9800, 9801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 9900, 9901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 10000, 10001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 10100, 10101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 10200, 10201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 10300, 10301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 10400, 10401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 10500, 10501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 10600, 10601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 10700, 10701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 10800, 10801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 10900, 10901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 11000, 11001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 11100, 11101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 11200, 11201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 11300, 11301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 11400, 11401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 11500, 11501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 11600, 11601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 11700, 11701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 11800, 11801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 11900, 11901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 12000, 12001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 12100, 12101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 12200, 12201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 12300, 12301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 12400, 12401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 12500, 12501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 12600, 12601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 12700, 12701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 12800, 12801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 12900, 12901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 13000, 13001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 13100, 13101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 13200, 13201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 13300, 13301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 13400, 13401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 13500, 13501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 13600, 13601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 13700, 13701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 13800, 13801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 13900, 13901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 14000, 14001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 14100, 14101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 14200, 14201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 14300, 14301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 14400, 14401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 14500, 14501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 14600, 14601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 14700, 14701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 14800, 14801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 14900, 14901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 15000, 15001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 15100, 15101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 15200, 15201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 15300, 15301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 15400, 15401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 15500, 15501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 15600, 15601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 15700, 15701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 15800, 15801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 15900, 15901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 16000, 16001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 16100, 16101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 16200, 16201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 16300, 16301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 16400, 16401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 16500, 16501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 16600, 16601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 16700, 16701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 16800, 16801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 16900, 16901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 17000, 17001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 17100, 17101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 17200, 17201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 17300, 17301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 17400, 17401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 17500, 17501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 17600, 17601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 17700, 17701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 17800, 17801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 17900, 17901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 18000, 18001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 18100, 18101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 18200, 18201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 18300, 18301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 18400, 18401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 18500, 18501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 18600, 18601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 18700, 18701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 18800, 18801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 18900, 18901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 19000, 19001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 19100, 19101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 19200, 19201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 19300, 19301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 19400, 19401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 19500, 19501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 19600, 19601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 19700, 19701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 19800, 19801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 19900, 19901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 20000, 20001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 20100, 20101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 20200, 20201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 20300, 20301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 20400, 20401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 20500, 20501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 20600, 20601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 20700, 20701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 20800, 20801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 20900, 20901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 21000, 21001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 21100, 21101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 21200, 21201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 21300, 21301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 21400, 21401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 21500, 21501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 21600, 21601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 21700, 21701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 21800, 21801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 21900, 21901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 22000, 22001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 22100, 22101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 22200, 22201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 22300, 22301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 22400, 22401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 22500, 22501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 22600, 22601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 22700, 22701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 22800, 22801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 22900, 22901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 23000, 23001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 23100, 23101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 23200, 23201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 23300, 23301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 23400, 23401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 23500, 23501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 23600, 23601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 23700, 23701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 23800, 23801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 23900, 23901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 24000, 24001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 24100, 24101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 24200, 24201 motions, 1 leaf cells
+Planning completed in 59.9978 seconds
+Status: Success
+
+Results:
+  States: 24298
+  Iterations: 24297
+  Acceptance rate: 100%
+  Min energy: 0
+  Efficiency: 404.982 states/sec
+
+Saving planner data to results/quadtree_no_energy_seed42_data.bin...
+  Verified: 24298 vertices loaded
+Metadata saved to results/quadtree_no_energy_seed42_metadata.txt
+
+=== Experiment Complete ===
+Output files:
+  Planner data: results/quadtree_no_energy_seed42_data.bin
+  Metadata: results/quadtree_no_energy_seed42_metadata.txt
+
+=========================================
+Running: quadtree_no_energy seed=43
+=========================================
+Protein Folding - Experiment Runner
+====================================
+
+
+=== Running Experiment ===
+Planner: QuadtreePlanner
+Seed: 43
+Wall-clock budget: 60 seconds
+Loaded protein: 10 residues
+  PDB ID: 1UAO, Chain: A, Model: 1
+Info:    QuadtreePlanner: Physical bounds - R_ee: [0.00, 40.41] Å, Rg: [4.24, 11.67] Å
+Info:    QuadtreePlanner: Added start state with energy -1.50 at projection (6.61, 4.66)
+Planner setup complete
+Starting planning...
+Debug:   QuadtreePlanner: Iteration 100, 101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 200, 201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 300, 301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 400, 401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 500, 501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 600, 601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 700, 701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 800, 801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 900, 901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 1000, 1001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 1100, 1101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 1200, 1201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 1300, 1301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 1400, 1401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 1500, 1501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 1600, 1601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 1700, 1701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 1800, 1801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 1900, 1901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 2000, 2001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 2100, 2101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 2200, 2201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 2300, 2301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 2400, 2401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 2500, 2501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 2600, 2601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 2700, 2701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 2800, 2801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 2900, 2901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 3000, 3001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 3100, 3101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 3200, 3201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 3300, 3301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 3400, 3401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 3500, 3501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 3600, 3601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 3700, 3701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 3800, 3801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 3900, 3901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 4000, 4001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 4100, 4101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 4200, 4201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 4300, 4301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 4400, 4401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 4500, 4501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 4600, 4601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 4700, 4701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 4800, 4801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 4900, 4901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 5000, 5001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 5100, 5101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 5200, 5201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 5300, 5301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 5400, 5401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 5500, 5501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 5600, 5601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 5700, 5701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 5800, 5801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 5900, 5901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 6000, 6001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 6100, 6101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 6200, 6201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 6300, 6301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 6400, 6401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 6500, 6501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 6600, 6601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 6700, 6701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 6800, 6801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 6900, 6901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 7000, 7001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 7100, 7101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 7200, 7201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 7300, 7301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 7400, 7401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 7500, 7501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 7600, 7601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 7700, 7701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 7800, 7801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 7900, 7901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 8000, 8001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 8100, 8101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 8200, 8201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 8300, 8301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 8400, 8401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 8500, 8501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 8600, 8601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 8700, 8701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 8800, 8801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 8900, 8901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 9000, 9001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 9100, 9101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 9200, 9201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 9300, 9301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 9400, 9401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 9500, 9501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 9600, 9601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 9700, 9701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 9800, 9801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 9900, 9901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 10000, 10001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 10100, 10101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 10200, 10201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 10300, 10301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 10400, 10401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 10500, 10501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 10600, 10601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 10700, 10701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 10800, 10801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 10900, 10901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 11000, 11001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 11100, 11101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 11200, 11201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 11300, 11301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 11400, 11401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 11500, 11501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 11600, 11601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 11700, 11701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 11800, 11801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 11900, 11901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 12000, 12001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 12100, 12101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 12200, 12201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 12300, 12301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 12400, 12401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 12500, 12501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 12600, 12601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 12700, 12701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 12800, 12801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 12900, 12901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 13000, 13001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 13100, 13101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 13200, 13201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 13300, 13301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 13400, 13401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 13500, 13501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 13600, 13601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 13700, 13701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 13800, 13801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 13900, 13901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 14000, 14001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 14100, 14101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 14200, 14201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 14300, 14301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 14400, 14401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 14500, 14501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 14600, 14601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 14700, 14701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 14800, 14801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 14900, 14901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 15000, 15001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 15100, 15101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 15200, 15201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 15300, 15301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 15400, 15401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 15500, 15501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 15600, 15601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 15700, 15701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 15800, 15801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 15900, 15901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 16000, 16001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 16100, 16101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 16200, 16201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 16300, 16301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 16400, 16401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 16500, 16501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 16600, 16601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 16700, 16701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 16800, 16801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 16900, 16901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 17000, 17001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 17100, 17101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 17200, 17201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 17300, 17301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 17400, 17401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 17500, 17501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 17600, 17601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 17700, 17701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 17800, 17801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 17900, 17901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 18000, 18001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 18100, 18101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 18200, 18201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 18300, 18301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 18400, 18401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 18500, 18501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 18600, 18601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 18700, 18701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 18800, 18801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 18900, 18901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 19000, 19001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 19100, 19101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 19200, 19201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 19300, 19301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 19400, 19401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 19500, 19501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 19600, 19601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 19700, 19701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 19800, 19801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 19900, 19901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 20000, 20001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 20100, 20101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 20200, 20201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 20300, 20301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 20400, 20401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 20500, 20501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 20600, 20601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 20700, 20701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 20800, 20801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 20900, 20901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 21000, 21001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 21100, 21101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 21200, 21201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 21300, 21301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 21400, 21401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 21500, 21501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 21600, 21601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 21700, 21701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 21800, 21801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 21900, 21901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 22000, 22001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 22100, 22101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 22200, 22201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 22300, 22301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 22400, 22401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 22500, 22501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 22600, 22601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 22700, 22701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 22800, 22801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 22900, 22901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 23000, 23001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 23100, 23101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 23200, 23201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 23300, 23301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 23400, 23401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 23500, 23501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 23600, 23601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 23700, 23701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 23800, 23801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 23900, 23901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 24000, 24001 motions, 1 leaf cells
+Planning completed in 60.0008 seconds
+Status: Success
+
+Results:
+  States: 24066
+  Iterations: 24065
+  Acceptance rate: 100%
+  Min energy: 0
+  Efficiency: 401.095 states/sec
+
+Saving planner data to results/quadtree_no_energy_seed43_data.bin...
+  Verified: 24066 vertices loaded
+Metadata saved to results/quadtree_no_energy_seed43_metadata.txt
+
+=== Experiment Complete ===
+Output files:
+  Planner data: results/quadtree_no_energy_seed43_data.bin
+  Metadata: results/quadtree_no_energy_seed43_metadata.txt
+
+=========================================
+Running: quadtree_no_energy seed=44
+=========================================
+Protein Folding - Experiment Runner
+====================================
+
+
+=== Running Experiment ===
+Planner: QuadtreePlanner
+Seed: 44
+Wall-clock budget: 60 seconds
+Loaded protein: 10 residues
+  PDB ID: 1UAO, Chain: A, Model: 1
+Info:    QuadtreePlanner: Physical bounds - R_ee: [0.00, 40.41] Å, Rg: [4.24, 11.67] Å
+Info:    QuadtreePlanner: Added start state with energy -1.50 at projection (6.61, 4.66)
+Planner setup complete
+Starting planning...
+Debug:   QuadtreePlanner: Iteration 100, 101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 200, 201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 300, 301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 400, 401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 500, 501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 600, 601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 700, 701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 800, 801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 900, 901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 1000, 1001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 1100, 1101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 1200, 1201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 1300, 1301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 1400, 1401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 1500, 1501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 1600, 1601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 1700, 1701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 1800, 1801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 1900, 1901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 2000, 2001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 2100, 2101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 2200, 2201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 2300, 2301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 2400, 2401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 2500, 2501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 2600, 2601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 2700, 2701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 2800, 2801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 2900, 2901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 3000, 3001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 3100, 3101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 3200, 3201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 3300, 3301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 3400, 3401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 3500, 3501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 3600, 3601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 3700, 3701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 3800, 3801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 3900, 3901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 4000, 4001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 4100, 4101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 4200, 4201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 4300, 4301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 4400, 4401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 4500, 4501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 4600, 4601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 4700, 4701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 4800, 4801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 4900, 4901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 5000, 5001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 5100, 5101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 5200, 5201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 5300, 5301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 5400, 5401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 5500, 5501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 5600, 5601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 5700, 5701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 5800, 5801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 5900, 5901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 6000, 6001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 6100, 6101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 6200, 6201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 6300, 6301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 6400, 6401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 6500, 6501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 6600, 6601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 6700, 6701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 6800, 6801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 6900, 6901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 7000, 7001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 7100, 7101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 7200, 7201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 7300, 7301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 7400, 7401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 7500, 7501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 7600, 7601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 7700, 7701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 7800, 7801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 7900, 7901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 8000, 8001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 8100, 8101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 8200, 8201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 8300, 8301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 8400, 8401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 8500, 8501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 8600, 8601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 8700, 8701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 8800, 8801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 8900, 8901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 9000, 9001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 9100, 9101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 9200, 9201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 9300, 9301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 9400, 9401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 9500, 9501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 9600, 9601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 9700, 9701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 9800, 9801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 9900, 9901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 10000, 10001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 10100, 10101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 10200, 10201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 10300, 10301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 10400, 10401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 10500, 10501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 10600, 10601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 10700, 10701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 10800, 10801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 10900, 10901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 11000, 11001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 11100, 11101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 11200, 11201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 11300, 11301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 11400, 11401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 11500, 11501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 11600, 11601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 11700, 11701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 11800, 11801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 11900, 11901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 12000, 12001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 12100, 12101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 12200, 12201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 12300, 12301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 12400, 12401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 12500, 12501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 12600, 12601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 12700, 12701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 12800, 12801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 12900, 12901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 13000, 13001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 13100, 13101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 13200, 13201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 13300, 13301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 13400, 13401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 13500, 13501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 13600, 13601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 13700, 13701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 13800, 13801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 13900, 13901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 14000, 14001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 14100, 14101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 14200, 14201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 14300, 14301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 14400, 14401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 14500, 14501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 14600, 14601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 14700, 14701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 14800, 14801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 14900, 14901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 15000, 15001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 15100, 15101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 15200, 15201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 15300, 15301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 15400, 15401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 15500, 15501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 15600, 15601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 15700, 15701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 15800, 15801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 15900, 15901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 16000, 16001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 16100, 16101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 16200, 16201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 16300, 16301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 16400, 16401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 16500, 16501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 16600, 16601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 16700, 16701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 16800, 16801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 16900, 16901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 17000, 17001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 17100, 17101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 17200, 17201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 17300, 17301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 17400, 17401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 17500, 17501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 17600, 17601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 17700, 17701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 17800, 17801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 17900, 17901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 18000, 18001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 18100, 18101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 18200, 18201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 18300, 18301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 18400, 18401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 18500, 18501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 18600, 18601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 18700, 18701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 18800, 18801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 18900, 18901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 19000, 19001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 19100, 19101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 19200, 19201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 19300, 19301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 19400, 19401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 19500, 19501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 19600, 19601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 19700, 19701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 19800, 19801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 19900, 19901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 20000, 20001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 20100, 20101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 20200, 20201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 20300, 20301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 20400, 20401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 20500, 20501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 20600, 20601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 20700, 20701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 20800, 20801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 20900, 20901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 21000, 21001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 21100, 21101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 21200, 21201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 21300, 21301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 21400, 21401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 21500, 21501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 21600, 21601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 21700, 21701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 21800, 21801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 21900, 21901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 22000, 22001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 22100, 22101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 22200, 22201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 22300, 22301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 22400, 22401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 22500, 22501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 22600, 22601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 22700, 22701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 22800, 22801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 22900, 22901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 23000, 23001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 23100, 23101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 23200, 23201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 23300, 23301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 23400, 23401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 23500, 23501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 23600, 23601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 23700, 23701 motions, 1 leaf cells
+Planning completed in 59.9992 seconds
+Status: Success
+
+Results:
+  States: 23800
+  Iterations: 23799
+  Acceptance rate: 100%
+  Min energy: 0
+  Efficiency: 396.672 states/sec
+
+Saving planner data to results/quadtree_no_energy_seed44_data.bin...
+  Verified: 23800 vertices loaded
+Metadata saved to results/quadtree_no_energy_seed44_metadata.txt
+
+=== Experiment Complete ===
+Output files:
+  Planner data: results/quadtree_no_energy_seed44_data.bin
+  Metadata: results/quadtree_no_energy_seed44_metadata.txt
+
+=========================================
+Running: quadtree_energy seed=42
+=========================================
+Protein Folding - Experiment Runner
+====================================
+
+
+=== Running Experiment ===
+Planner: QuadtreePlanner
+Seed: 42
+Wall-clock budget: 60 seconds
+Loaded protein: 10 residues
+  PDB ID: 1UAO, Chain: A, Model: 1
+Info:    QuadtreePlanner: Physical bounds - R_ee: [0.00, 40.41] Å, Rg: [4.24, 11.67] Å
+Info:    QuadtreePlanner: Added start state with energy -1.50 at projection (6.61, 4.66)
+Planner setup complete
+Starting planning...
+Debug:   QuadtreePlanner: Iteration 100, 101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 200, 201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 300, 301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 400, 401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 500, 501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 600, 601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 700, 701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 800, 801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 900, 901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 1000, 1001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 1100, 1101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 1200, 1201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 1300, 1301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 1400, 1401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 1500, 1501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 1600, 1601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 1700, 1701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 1800, 1801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 1900, 1901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 2000, 2001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 2100, 2101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 2200, 2201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 2300, 2301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 2400, 2401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 2500, 2501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 2600, 2601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 2700, 2701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 2800, 2801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 2900, 2901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 3000, 3001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 3100, 3101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 3200, 3201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 3300, 3301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 3400, 3401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 3500, 3501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 3600, 3601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 3700, 3701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 3800, 3801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 3900, 3901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 4000, 4001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 4100, 4101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 4200, 4201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 4300, 4301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 4400, 4401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 4500, 4501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 4600, 4601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 4700, 4701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 4800, 4801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 4900, 4901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 5000, 5001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 5100, 5101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 5200, 5201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 5300, 5301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 5400, 5401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 5500, 5501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 5600, 5601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 5700, 5701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 5800, 5801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 5900, 5901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 6000, 6001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 6100, 6101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 6200, 6201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 6300, 6301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 6400, 6401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 6500, 6501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 6600, 6601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 6700, 6701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 6800, 6801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 6900, 6901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 7000, 7001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 7100, 7101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 7200, 7201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 7300, 7301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 7400, 7401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 7500, 7501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 7600, 7601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 7700, 7701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 7800, 7801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 7900, 7901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 8000, 8001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 8100, 8101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 8200, 8201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 8300, 8301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 8400, 8401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 8500, 8501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 8600, 8601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 8700, 8701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 8800, 8801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 8900, 8901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 9000, 9001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 9100, 9101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 9200, 9201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 9300, 9301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 9400, 9401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 9500, 9501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 9600, 9601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 9700, 9701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 9800, 9801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 9900, 9901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 10000, 10001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 10100, 10101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 10200, 10201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 10300, 10301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 10400, 10401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 10500, 10501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 10600, 10601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 10700, 10701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 10800, 10801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 10900, 10901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 11000, 11001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 11100, 11101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 11200, 11201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 11300, 11301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 11400, 11401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 11500, 11501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 11600, 11601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 11700, 11701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 11800, 11801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 11900, 11901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 12000, 12001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 12100, 12101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 12200, 12201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 12300, 12301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 12400, 12401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 12500, 12501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 12600, 12601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 12700, 12701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 12800, 12801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 12900, 12901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 13000, 13001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 13100, 13101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 13200, 13201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 13300, 13301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 13400, 13401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 13500, 13501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 13600, 13601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 13700, 13701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 13800, 13801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 13900, 13901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 14000, 14001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 14100, 14101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 14200, 14201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 14300, 14301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 14400, 14401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 14500, 14501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 14600, 14601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 14700, 14701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 14800, 14801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 14900, 14901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 15000, 15001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 15100, 15101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 15200, 15201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 15300, 15301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 15400, 15401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 15500, 15501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 15600, 15601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 15700, 15701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 15800, 15801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 15900, 15901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 16000, 16001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 16100, 16101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 16200, 16201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 16300, 16301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 16400, 16401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 16500, 16501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 16600, 16601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 16700, 16701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 16800, 16801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 16900, 16901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 17000, 17001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 17100, 17101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 17200, 17201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 17300, 17301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 17400, 17401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 17500, 17501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 17600, 17601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 17700, 17701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 17800, 17801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 17900, 17901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 18000, 18001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 18100, 18101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 18200, 18201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 18300, 18301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 18400, 18401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 18500, 18501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 18600, 18601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 18700, 18701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 18800, 18801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 18900, 18901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 19000, 19001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 19100, 19101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 19200, 19201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 19300, 19301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 19400, 19401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 19500, 19501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 19600, 19601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 19700, 19701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 19800, 19801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 19900, 19901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 20000, 20001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 20100, 20101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 20200, 20201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 20300, 20301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 20400, 20401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 20500, 20501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 20600, 20601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 20700, 20701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 20800, 20801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 20900, 20901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 21000, 21001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 21100, 21101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 21200, 21201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 21300, 21301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 21400, 21401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 21500, 21501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 21600, 21601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 21700, 21701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 21800, 21801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 21900, 21901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 22000, 22001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 22100, 22101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 22200, 22201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 22300, 22301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 22400, 22401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 22500, 22501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 22600, 22601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 22700, 22701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 22800, 22801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 22900, 22901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 23000, 23001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 23100, 23101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 23200, 23201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 23300, 23301 motions, 1 leaf cells
+Planning completed in 60.0002 seconds
+Status: Success
+
+Results:
+  States: 23335
+  Iterations: 23334
+  Acceptance rate: 100%
+  Min energy: 0
+  Efficiency: 388.916 states/sec
+
+Saving planner data to results/quadtree_energy_seed42_data.bin...
+  Verified: 23335 vertices loaded
+Metadata saved to results/quadtree_energy_seed42_metadata.txt
+
+=== Experiment Complete ===
+Output files:
+  Planner data: results/quadtree_energy_seed42_data.bin
+  Metadata: results/quadtree_energy_seed42_metadata.txt
+
+=========================================
+Running: quadtree_energy seed=43
+=========================================
+Protein Folding - Experiment Runner
+====================================
+
+
+=== Running Experiment ===
+Planner: QuadtreePlanner
+Seed: 43
+Wall-clock budget: 60 seconds
+Loaded protein: 10 residues
+  PDB ID: 1UAO, Chain: A, Model: 1
+Info:    QuadtreePlanner: Physical bounds - R_ee: [0.00, 40.41] Å, Rg: [4.24, 11.67] Å
+Info:    QuadtreePlanner: Added start state with energy -1.50 at projection (6.61, 4.66)
+Planner setup complete
+Starting planning...
+Debug:   QuadtreePlanner: Iteration 100, 101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 200, 201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 300, 301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 400, 401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 500, 501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 600, 601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 700, 701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 800, 801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 900, 901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 1000, 1001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 1100, 1101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 1200, 1201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 1300, 1301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 1400, 1401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 1500, 1501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 1600, 1601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 1700, 1701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 1800, 1801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 1900, 1901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 2000, 2001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 2100, 2101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 2200, 2201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 2300, 2301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 2400, 2401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 2500, 2501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 2600, 2601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 2700, 2701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 2800, 2801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 2900, 2901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 3000, 3001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 3100, 3101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 3200, 3201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 3300, 3301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 3400, 3401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 3500, 3501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 3600, 3601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 3700, 3701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 3800, 3801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 3900, 3901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 4000, 4001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 4100, 4101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 4200, 4201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 4300, 4301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 4400, 4401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 4500, 4501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 4600, 4601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 4700, 4701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 4800, 4801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 4900, 4901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 5000, 5001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 5100, 5101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 5200, 5201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 5300, 5301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 5400, 5401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 5500, 5501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 5600, 5601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 5700, 5701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 5800, 5801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 5900, 5901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 6000, 6001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 6100, 6101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 6200, 6201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 6300, 6301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 6400, 6401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 6500, 6501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 6600, 6601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 6700, 6701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 6800, 6801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 6900, 6901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 7000, 7001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 7100, 7101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 7200, 7201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 7300, 7301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 7400, 7401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 7500, 7501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 7600, 7601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 7700, 7701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 7800, 7801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 7900, 7901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 8000, 8001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 8100, 8101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 8200, 8201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 8300, 8301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 8400, 8401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 8500, 8501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 8600, 8601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 8700, 8701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 8800, 8801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 8900, 8901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 9000, 9001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 9100, 9101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 9200, 9201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 9300, 9301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 9400, 9401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 9500, 9501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 9600, 9601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 9700, 9701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 9800, 9801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 9900, 9901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 10000, 10001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 10100, 10101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 10200, 10201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 10300, 10301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 10400, 10401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 10500, 10501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 10600, 10601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 10700, 10701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 10800, 10801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 10900, 10901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 11000, 11001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 11100, 11101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 11200, 11201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 11300, 11301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 11400, 11401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 11500, 11501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 11600, 11601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 11700, 11701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 11800, 11801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 11900, 11901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 12000, 12001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 12100, 12101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 12200, 12201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 12300, 12301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 12400, 12401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 12500, 12501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 12600, 12601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 12700, 12701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 12800, 12801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 12900, 12901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 13000, 13001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 13100, 13101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 13200, 13201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 13300, 13301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 13400, 13401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 13500, 13501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 13600, 13601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 13700, 13701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 13800, 13801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 13900, 13901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 14000, 14001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 14100, 14101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 14200, 14201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 14300, 14301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 14400, 14401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 14500, 14501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 14600, 14601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 14700, 14701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 14800, 14801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 14900, 14901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 15000, 15001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 15100, 15101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 15200, 15201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 15300, 15301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 15400, 15401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 15500, 15501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 15600, 15601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 15700, 15701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 15800, 15801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 15900, 15901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 16000, 16001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 16100, 16101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 16200, 16201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 16300, 16301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 16400, 16401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 16500, 16501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 16600, 16601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 16700, 16701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 16800, 16801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 16900, 16901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 17000, 17001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 17100, 17101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 17200, 17201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 17300, 17301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 17400, 17401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 17500, 17501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 17600, 17601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 17700, 17701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 17800, 17801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 17900, 17901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 18000, 18001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 18100, 18101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 18200, 18201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 18300, 18301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 18400, 18401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 18500, 18501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 18600, 18601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 18700, 18701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 18800, 18801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 18900, 18901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 19000, 19001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 19100, 19101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 19200, 19201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 19300, 19301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 19400, 19401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 19500, 19501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 19600, 19601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 19700, 19701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 19800, 19801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 19900, 19901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 20000, 20001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 20100, 20101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 20200, 20201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 20300, 20301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 20400, 20401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 20500, 20501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 20600, 20601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 20700, 20701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 20800, 20801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 20900, 20901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 21000, 21001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 21100, 21101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 21200, 21201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 21300, 21301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 21400, 21401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 21500, 21501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 21600, 21601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 21700, 21701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 21800, 21801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 21900, 21901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 22000, 22001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 22100, 22101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 22200, 22201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 22300, 22301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 22400, 22401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 22500, 22501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 22600, 22601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 22700, 22701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 22800, 22801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 22900, 22901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 23000, 23001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 23100, 23101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 23200, 23201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 23300, 23301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 23400, 23401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 23500, 23501 motions, 1 leaf cells
+Planning completed in 60.0018 seconds
+Status: Success
+
+Results:
+  States: 23573
+  Iterations: 23572
+  Acceptance rate: 100%
+  Min energy: 0
+  Efficiency: 392.871 states/sec
+
+Saving planner data to results/quadtree_energy_seed43_data.bin...
+  Verified: 23573 vertices loaded
+Metadata saved to results/quadtree_energy_seed43_metadata.txt
+
+=== Experiment Complete ===
+Output files:
+  Planner data: results/quadtree_energy_seed43_data.bin
+  Metadata: results/quadtree_energy_seed43_metadata.txt
+
+=========================================
+Running: quadtree_energy seed=44
+=========================================
+Protein Folding - Experiment Runner
+====================================
+
+
+=== Running Experiment ===
+Planner: QuadtreePlanner
+Seed: 44
+Wall-clock budget: 60 seconds
+Loaded protein: 10 residues
+  PDB ID: 1UAO, Chain: A, Model: 1
+Info:    QuadtreePlanner: Physical bounds - R_ee: [0.00, 40.41] Å, Rg: [4.24, 11.67] Å
+Info:    QuadtreePlanner: Added start state with energy -1.50 at projection (6.61, 4.66)
+Planner setup complete
+Starting planning...
+Debug:   QuadtreePlanner: Iteration 100, 101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 200, 201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 300, 301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 400, 401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 500, 501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 600, 601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 700, 701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 800, 801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 900, 901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 1000, 1001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 1100, 1101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 1200, 1201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 1300, 1301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 1400, 1401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 1500, 1501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 1600, 1601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 1700, 1701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 1800, 1801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 1900, 1901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 2000, 2001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 2100, 2101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 2200, 2201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 2300, 2301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 2400, 2401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 2500, 2501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 2600, 2601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 2700, 2701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 2800, 2801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 2900, 2901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 3000, 3001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 3100, 3101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 3200, 3201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 3300, 3301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 3400, 3401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 3500, 3501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 3600, 3601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 3700, 3701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 3800, 3801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 3900, 3901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 4000, 4001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 4100, 4101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 4200, 4201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 4300, 4301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 4400, 4401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 4500, 4501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 4600, 4601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 4700, 4701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 4800, 4801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 4900, 4901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 5000, 5001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 5100, 5101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 5200, 5201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 5300, 5301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 5400, 5401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 5500, 5501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 5600, 5601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 5700, 5701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 5800, 5801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 5900, 5901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 6000, 6001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 6100, 6101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 6200, 6201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 6300, 6301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 6400, 6401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 6500, 6501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 6600, 6601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 6700, 6701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 6800, 6801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 6900, 6901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 7000, 7001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 7100, 7101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 7200, 7201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 7300, 7301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 7400, 7401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 7500, 7501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 7600, 7601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 7700, 7701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 7800, 7801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 7900, 7901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 8000, 8001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 8100, 8101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 8200, 8201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 8300, 8301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 8400, 8401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 8500, 8501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 8600, 8601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 8700, 8701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 8800, 8801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 8900, 8901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 9000, 9001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 9100, 9101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 9200, 9201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 9300, 9301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 9400, 9401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 9500, 9501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 9600, 9601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 9700, 9701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 9800, 9801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 9900, 9901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 10000, 10001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 10100, 10101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 10200, 10201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 10300, 10301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 10400, 10401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 10500, 10501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 10600, 10601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 10700, 10701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 10800, 10801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 10900, 10901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 11000, 11001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 11100, 11101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 11200, 11201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 11300, 11301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 11400, 11401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 11500, 11501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 11600, 11601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 11700, 11701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 11800, 11801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 11900, 11901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 12000, 12001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 12100, 12101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 12200, 12201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 12300, 12301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 12400, 12401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 12500, 12501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 12600, 12601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 12700, 12701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 12800, 12801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 12900, 12901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 13000, 13001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 13100, 13101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 13200, 13201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 13300, 13301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 13400, 13401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 13500, 13501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 13600, 13601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 13700, 13701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 13800, 13801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 13900, 13901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 14000, 14001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 14100, 14101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 14200, 14201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 14300, 14301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 14400, 14401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 14500, 14501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 14600, 14601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 14700, 14701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 14800, 14801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 14900, 14901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 15000, 15001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 15100, 15101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 15200, 15201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 15300, 15301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 15400, 15401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 15500, 15501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 15600, 15601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 15700, 15701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 15800, 15801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 15900, 15901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 16000, 16001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 16100, 16101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 16200, 16201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 16300, 16301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 16400, 16401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 16500, 16501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 16600, 16601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 16700, 16701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 16800, 16801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 16900, 16901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 17000, 17001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 17100, 17101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 17200, 17201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 17300, 17301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 17400, 17401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 17500, 17501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 17600, 17601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 17700, 17701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 17800, 17801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 17900, 17901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 18000, 18001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 18100, 18101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 18200, 18201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 18300, 18301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 18400, 18401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 18500, 18501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 18600, 18601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 18700, 18701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 18800, 18801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 18900, 18901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 19000, 19001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 19100, 19101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 19200, 19201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 19300, 19301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 19400, 19401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 19500, 19501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 19600, 19601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 19700, 19701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 19800, 19801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 19900, 19901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 20000, 20001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 20100, 20101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 20200, 20201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 20300, 20301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 20400, 20401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 20500, 20501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 20600, 20601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 20700, 20701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 20800, 20801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 20900, 20901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 21000, 21001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 21100, 21101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 21200, 21201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 21300, 21301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 21400, 21401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 21500, 21501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 21600, 21601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 21700, 21701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 21800, 21801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 21900, 21901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 22000, 22001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 22100, 22101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 22200, 22201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 22300, 22301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 22400, 22401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 22500, 22501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 22600, 22601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 22700, 22701 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 22800, 22801 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 22900, 22901 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 23000, 23001 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 23100, 23101 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 23200, 23201 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 23300, 23301 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 23400, 23401 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 23500, 23501 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 23600, 23601 motions, 1 leaf cells
+Debug:   QuadtreePlanner: Iteration 23700, 23701 motions, 1 leaf cells
+Planning completed in 60.0017 seconds
+Status: Success
+
+Results:
+  States: 23724
+  Iterations: 23723
+  Acceptance rate: 100%
+  Min energy: 0
+  Efficiency: 395.389 states/sec
+
+Saving planner data to results/quadtree_energy_seed44_data.bin...
+  Verified: 23724 vertices loaded
+Metadata saved to results/quadtree_energy_seed44_metadata.txt
+
+=== Experiment Complete ===
+Output files:
+  Planner data: results/quadtree_energy_seed44_data.bin
+  Metadata: results/quadtree_energy_seed44_metadata.txt
+
+================================
+All experiments complete!
+Total time: 366 seconds
+Results saved in results/ directory
+================================

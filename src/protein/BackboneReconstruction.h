@@ -75,6 +75,12 @@ public:
     const ProteinStructure& getReference() const { return reference_; }
 
     /**
+     * @brief Set state space for extracting phi/psi from states
+     * @param stateSpace Pointer to ProteinStateSpace (must outlive this object)
+     */
+    void setStateSpace(const class ProteinStateSpace* stateSpace) { stateSpace_ = stateSpace; }
+
+    /**
      * @brief Compute total bond-path length from first to last Cα
      * Used for conservative quadtree bounds.
      */
@@ -83,6 +89,7 @@ public:
 private:
     ProteinStructure reference_;
     BackboneGeometry geometry_;
+    const class ProteinStateSpace* stateSpace_ = nullptr;
 
     // Helper: build N atom from previous C, Cα
     Vec3 placeN(const Vec3& C_prev, const Vec3& CA_prev, const Vec3& N_prev,

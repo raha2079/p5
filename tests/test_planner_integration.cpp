@@ -35,9 +35,9 @@ void runPlannerIntegrationTests() {
         return energy;
     };
 
-    // Create motion validator with moderate temperature
+    // Create motion validator with tau=1.0 (Section 4: initial τ = 1.0 reduced-score unit)
     auto validator = std::make_shared<ProbabilisticMotionValidator>(
-        si, testEnergy, 10, 300.0, 1.380649e-23);
+        si, testEnergy, 10, 1.0);
 
     si->setMotionValidator(validator);
     si->setup();

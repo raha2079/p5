@@ -1,0 +1,33 @@
+# Experiment Metadata
+# Generated: 1795527418
+
+[Configuration]
+planner_name = QuadtreePlanner
+pdb_path = data/1UAO.pdb
+chain_id = A
+model_number = 1
+max_iterations = 100000
+wall_clock_budget_seconds = 15
+exclude_1_4_neighbors = false
+radii_scale_factor = 1
+tau = 0.1
+random_seed = 42
+use_energy_weighting = true
+uniform_sampling_prob = 0.2
+trials_per_attempt = 8
+steering_std_dev = 0.1745
+
+[Results]
+wall_clock_time_seconds = 15.0068
+iterations_completed = 1192
+num_states = 656
+num_leaf_cells = 73
+total_attempts = 1152
+accepted_states = 655
+acceptance_rate = 0.568576
+min_energy = -1.95419
+median_energy = -1.84044
+max_energy = -1.40209
+diversity_score = 656
+exploration_efficiency = 43.7134
+planner_data_file = results/char_15s_seed42_data.bin

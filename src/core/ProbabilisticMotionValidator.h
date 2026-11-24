@@ -32,16 +32,14 @@ public:
      * @brief Construct a probabilistic motion validator.
      * @param si Space information
      * @param energyEvaluator Function to evaluate energy of a state
-     * @param interpolationResolution Number of intermediate states to check
-     * @param temperature Temperature in Kelvin (default: 300K)
-     * @param kB Boltzmann constant (default: 1.380649e-23 J/K)
+     * @param interpolationResolution Number of intermediate states to check (Section 4: set so largest torsion change ≤5°)
+     * @param tau Temperature/scale parameter in energy units (Section 4: initial τ = 1.0 reduced-score unit)
      */
     ProbabilisticMotionValidator(
         const ob::SpaceInformationPtr& si,
         EnergyEvaluator energyEvaluator,
         unsigned int interpolationResolution = 10,
-        double temperature = 300.0,
-        double kB = 1.380649e-23);
+        double tau = 1.0);
 
     /**
      * @brief Check if a motion between two states is valid.
@@ -75,28 +73,39 @@ public:
     }
 
     /**
-     * @brief Set the temperature.
+     * @brief Set tau (temperature/scale parameter).
      */
-    void setTemperature(double temperature) {
-        temperature_ = temperature;
+    void setTau(double tau) {
+        tau_ = tau;
     }
 
     /**
-     * @brief Get the temperature.
+     * @brief Get tau (temperature/scale parameter).
      */
-    double getTemperature() const {
-        return temperature_;
+    double getTau() const {
+        return tau_;
     }
 
     // Statistics for debugging/analysis
     mutable unsigned long acceptedTransitions_ = 0;
     mutable unsigned long rejectedTransitions_ = 0;
+    mutable unsigned long checkedMotions_ = 0;
+    mutable unsigned long validMotions_ = 0;
+    mutable unsigned long invalidMotions_ = 0;
+    mutable std::vector<double> attemptedEnergies_;
+
+    // Getters for statistics
+    unsigned long getCheckedMotions() const { return checkedMotions_; }
+    unsigned long getValidMotions() const { return validMotions_; }
+    unsigned long getInvalidMotions() const { return invalidMotions_; }
+    unsigned long getAcceptedTransitions() const { return acceptedTransitions_; }
+    unsigned long getRejectedTransitions() const { return rejectedTransitions_; }
+    std::vector<double> getAttemptedEnergies() const { return attemptedEnergies_; }
 
 private:
     EnergyEvaluator energyEvaluator_;
     unsigned int interpolationResolution_;
-    double temperature_;
-    double kB_;
+    double tau_;  // Temperature/scale parameter (Section 4: τ in reduced-score units)
     mutable std::mt19937 rng_;
     mutable std::uniform_real_distribution<double> uniform_;
 

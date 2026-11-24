@@ -1,391 +1,184 @@
-# Protein Folding - Conformational Space Explorer
+# COMP/ELEC/MECH 450/550 Project 5: Protein Folding
 
-This project explores protein conformational landscapes using OMPL (Open Motion Planning Library). It models protein backbone conformations and uses sampling-based planning algorithms to explore the energy landscape.
+## Project Overview
 
-**Status:** Milestone 1 - Foundation complete
+This project implements conformational space exploration for protein folding using OMPL, with an adaptive quadtree-based planner and probabilistic motion validation. The goal is to compare adaptive quadtree exploration against standard RRT for discovering structurally diverse, low-energy protein conformations.
 
-## Project Structure
+**Protein**: Chignolin (PDB ID: 1UAO, model 1, chain A)  
+**Active Torsions**: 18 backbone φ/ψ angles (10 residues)  
+**Energy Model**: backbone_reduced (dimensionless reduced score)  
+**Projection**: 2D (end-to-end Cα distance, Cα radius of gyration)
 
-```
-.
-├── src/                      # C++ source code
-│   ├── core/                 # Core components
-│   │   ├── ProteinStateSpace.{h,cpp}         # Compound state space for proteins
-│   │   ├── ProbabilisticMotionValidator.{h,cpp}  # Metropolis-like motion validator
-│   │   ├── StateExporter.{h,cpp}             # Export states to CSV
-│   │   └── ConfigLoader.{h,cpp}              # Configuration file parser
-│   ├── planners/             # Planner registry
-│   │   └── PlannerRegistry.{h,cpp}           # Register and create planners by name
-│   ├── rules/                # State validation rules
-│   │   └── StateRuleRegistry.{h,cpp}         # Register hard state constraints
-│   ├── energy/               # Energy evaluators
-│   │   └── EnergyEvaluatorRegistry.{h,cpp}   # Register energy functions
-│   └── main.cpp              # Main executable entry point
-├── tests/                    # C++ test suite
-│   ├── test_main.cpp         # Test runner
-│   ├── test_state_space.cpp  # State space tests
-│   ├── test_motion_validator.cpp  # Motion validator tests
-│   ├── test_planner_integration.cpp  # Planner integration tests
-│   ├── test_storage.cpp      # PlannerDataStorage tests
-│   └── test_export.cpp       # State export tests
-├── analysis/                 # Python analysis scripts
-│   └── analyze_states.py     # Read and verify exported CSV data
-├── config/                   # Configuration examples
-│   └── example.conf          # Example configuration file
-├── CMakeLists.txt            # Root CMake configuration
-└── README.md                 # This file
-```
+## Quick Start
 
-## Requirements
-
-### System Dependencies
-
-- **C++ Compiler:** C++17 support (tested with Clang 14.0.3, GCC 8+)
-- **CMake:** Version 3.10 or higher
-- **OMPL:** Version 1.5+ (Open Motion Planning Library)
-- **Boost:** Components: serialization, filesystem, system
-- **Eigen3:** Linear algebra library
-- **Python:** Version 3.7+ (for analysis scripts)
-
-### Tested Platforms
-
-- **Development:** macOS 14.5 (Tahoe) with Apple Clang 14.0.3
-- **Target:** Modern Linux (Ubuntu 20.04+, Debian 11+, Fedora 35+)
-
-**Note:** This project is designed to compile and run on Linux as required by the assignment. macOS is used for development only.
-
-## Installation
-
-### On Linux (Ubuntu/Debian)
-
+### Build
 ```bash
-# Install dependencies
-sudo apt-get update
-sudo apt-get install -y \
-    build-essential \
-    cmake \
-    libompl-dev \
-    libboost-serialization-dev \
-    libboost-filesystem-dev \
-    libboost-system-dev \
-    libeigen3-dev \
-    python3
-
-# Clone and build
-git clone <repository-url> protein-folding
-cd protein-folding
-mkdir build && cd build
+mkdir -p build && cd build
 cmake ..
-make -j$(nproc)
+make -j4
 ```
 
-### On macOS (Development)
-
+### Run Tests
 ```bash
-# Install dependencies via Homebrew
-brew install cmake ompl boost eigen python3
-
-# Clone and build
-git clone <repository-url> protein-folding
-cd protein-folding
-mkdir build && cd build
-cmake ..
-make -j$(sysctl -n hw.ncpu)
+./tests/test_protein_folding          # All tests
+./tests/test_protein_folding native   # Native clash sanity check
 ```
 
-## Building from Fresh Checkout
+## Implementation Status Summary
 
-```bash
-# 1. Create build directory
-mkdir build
-cd build
+### ✅ COMPLETED & TESTED
+- Protein backbone geometry (PDB loading, reconstruction, RMSD)
+- Energy model with repulsion/attraction and 1-4 exclusions
+- Probabilistic MotionValidator with τ parameter
+- 2D projection (end-to-end, radius of gyration)
+- Adaptive quadtree with corrected split criteria (D_visit, D_accept)
+- PlannerDataStorage save/reload/verify
+- Native clash sanity check
 
-# 2. Configure with CMake
-cmake ..
+### ⚠️ NEEDS COMPLETION
+- Section 8 exact cell selection (percentile ranks)
+- Section 8 steering (8 trials, 1-3 torsions)
+- RRT baseline wrapper with proper range tuning
+- Experiment runner (config, timing, metadata)
+- Geometry verification tests (3 from Section 2)
+- Python analysis script (all 6 figures/tables)
 
-# 3. Build
-make
+## Critical Parameter Settings
 
-# 4. Run tests
-ctest --output-on-failure
-# Or run the test executable directly:
-./tests/test_protein_folding all
-```
-
-## Running Tests
-
-The test suite verifies all Milestone 1 requirements:
-
-```bash
-# Run all tests
-cd build
-ctest --output-on-failure
-
-# Or run specific test suites
-./tests/test_protein_folding state_space      # Test 1: State space
-./tests/test_protein_folding motion_validator # Test 2: Motion validator
-./tests/test_protein_folding planner          # Test 3: Planner integration
-./tests/test_protein_folding storage          # Test 4: Save/reload graph
-./tests/test_protein_folding export           # Test 5: Export and Python analysis
-```
-
-### What the Tests Verify
-
-1. **State Space Tests** (`test_state_space.cpp`)
-   - Creates a toy protein with 2 residues × 2 SO2 angles (φ, ψ)
-   - Sets and retrieves known angle values
-   - Verifies nested compound structure
-   - Tests state sampling
-
-2. **Motion Validator Tests** (`test_motion_validator.cpp`)
-   - Implements `checkMotion(s1, s2)` overload
-   - Implements `checkMotion(s1, s2, lastValid)` overload with last-valid-state tracking
-   - Verifies downhill (lower energy) motions are always accepted
-   - Verifies equal-energy motions are always accepted
-   - Verifies uphill motions use probabilistic acceptance
-   - Demonstrates validator is invoked by OMPL
-
-3. **Planner Integration Tests** (`test_planner_integration.cpp`)
-   - Runs stock OMPL planner (RRTConnect)
-   - Generates a nonempty graph with vertices and edges
-   - Verifies planner invokes the custom motion validator
-   - Extracts and inspects PlannerData
-
-4. **Storage Tests** (`test_storage.cpp`)
-   - Saves planner graph using `PlannerDataStorage`
-   - Reloads graph into fresh `PlannerData` object
-   - Verifies vertex count, edge count match
-   - Verifies state angle values are preserved after reload
-
-5. **Export Tests** (`test_export.cpp`)
-   - Exports states to CSV format
-   - Verifies CSV column structure
-   - Tests with and without energy column
-   - Generates summary statistics
-
-### Python Analysis Verification
-
-After running the C++ export test, verify Python can read the data:
-
-```bash
-cd build/tests
-# The test creates test_states.csv temporarily
-# To test with real data, run the export test and use:
-python3 ../../analysis/analyze_states.py test_states.csv --residues 2
-```
-
-## Configuration System
-
-### Example Configuration
-
-See `config/example.conf` for a complete example. Basic format:
-
-```
-# Planner selection
-planner = RRT
-
-# Protein structure
-num_residues = 2
-
-# Motion validator
-interpolation_resolution = 10
-temperature = 300.0
-
-# Energy model
-energy_model = HarmonicEnergy
-```
-
-### Using Configuration
-
-```bash
-./build/src/protein_planner config/example.conf
-```
-
-### Extending the System
-
-#### Adding a New Planner
-
-Edit `src/planners/PlannerRegistry.cpp`:
-
+### Native Clash Prevention (1UAO)
+Default radii cause massive native-state repulsion. **MUST configure**:
 ```cpp
-// In registerStandardPlanners()
-registerPlanner("MyPlanner", [](const ob::SpaceInformationPtr& si) -> ob::PlannerPtr {
-    return std::make_shared<ompl::geometric::MyPlanner>(si);
-});
+// In BackboneReducedModel
+radii_scale_factor = 0.60;       // Recommended (default: 1.0)
+exclude_1_4_neighbors = true;    // Enable if needed
 ```
 
-Then use in config: `planner = MyPlanner`
+Test with: `./tests/test_protein_folding native`
 
-#### Adding a State Validation Rule
-
-Edit `src/rules/StateRuleRegistry.cpp`:
-
+### MotionValidator
 ```cpp
-// In registerTestRules() or create registerProductionRules()
-registerRule("MyRule", [](const std::map<std::string, std::string>& options) -> StateRule {
-    return [](const ob::State* state, std::string& reason) -> bool {
-        // Your validation logic
-        if (/* invalid */) {
-            reason = "MyRule: explanation";
-            return false;
-        }
-        return true;
-    };
-});
+tau = 1.0;  // Initial temperature/scale parameter (tune in [0.5, 2.0])
 ```
+Target acceptance rate: 20%-60%
 
-#### Adding an Energy Evaluator
-
-Edit `src/energy/EnergyEvaluatorRegistry.cpp`:
-
+### RRT Range (Critical for Fair Comparison!)
 ```cpp
-// In registerTestEvaluators() or create registerProductionEvaluators()
-registerEvaluator("MyEnergy", [](const std::map<std::string, std::string>& options) -> EnergyEvaluator {
-    return [](const ob::State* state) -> double {
-        // Compute and return energy
-        return energy;
-    };
-});
+rrt->setRange(0.40);  // Start here (default 11.3 rad causes 100% clashes!)
+```
+Tune in [0.35, 0.50] rad to match adaptive planner acceptance rate.
+
+## Implementation Details
+
+### Section 2: Protein Backbone Geometry ✅
+- **PDB**: Loads 1UAO with chain/model selection
+- **State Space**: CompoundStateSpace(SO2 × SO2) per residue
+- **Reconstruction**: Forward kinematics preserving reference geometry
+- **RMSD**: Kabsch alignment for backbone comparison
+- **Test**: Exact reconstruction RMSD ≈ 0.0 Å ✓
+
+### Section 3: Energy Model ✅
+```
+Repulsion:  w_rep × (d_contact - d)² for nonbonded pairs (d < d_contact)
+Attraction: -0.2 × exp(-((d - 6.0)² / 2×1.0²)) for Cα pairs |i-j|≥4
+```
+- Excludes: 1-2, 1-3, optionally 1-4 bonded neighbors
+- Bondi radii: N=1.55Å, C=1.70Å, O=1.52Å (uniform scale factor applied)
+- **Native state test**: Repulsion should be ≈0 after scaling
+
+### Section 4: MotionValidator ✅
+- **Formula**: P(accept uphill) = exp(-ΔE/τ)
+- **Downhill**: Always accepted
+- **Interpolation**: Fixed steps (configure for ≤5° per step)
+- **Seeded RNG**: Deterministic replay
+
+### Sections 5-7: Adaptive Quadtree ✅ (formulas fixed)
+- **Split interval**: Every 32 observations
+- **D_visit**: 0.5 × Σ|N_j/N - 0.25| > 0.30
+- **D_accept**: max[(A_j+1)/(N_j+2)] - min[(A_j+1)/(N_j+2)] > 0.40  (N_j≥8, ≥2 eligible)
+- **Representatives**: ceil(0.10 × eligible), always keep lowest-energy
+
+### Section 8: Cell Selection & Steering ⚠️ NOT EXACT
+Current implementation uses simplified weighting.
+
+**Required**:
+- 20% uniform, 80% weighted by percentile ranks:
+  - w_cov=0.50 (lower density), w_rec=0.30 (higher staleness), w_eng=0.20 (lower energy)
+- Steering: 8 trials, perturb 1-3 torsions (σ=10°), pick closest to target
+
+**ACTION**: Reimplement QuadtreePlanner selection/steering to match spec.
+
+### Section 9: RRT Baseline ⚠️ NOT IMPLEMENTED
+**Required**:
+- Same MotionValidator, same start, wall-clock budget
+- **CRITICAL**: rrt->setRange(~0.40 rad), NOT default!
+
+### Section 10: Storage & Analysis ✅ (storage), ⚠️ (analysis)
+- **Storage**: PlannerDataStorage fully working
+- **CSV Export**: States, energies, projections
+- **Analysis**: Missing all 6 required figures/tables
+
+## File Structure
+```
+├── data/1UAO.pdb                    # Chignolin structure
+├── src/
+│   ├── core/                        # State space, validator, export
+│   ├── protein/                     # PDB, reconstruction
+│   ├── models/                      # Energy model
+│   ├── projection/                  # 2D projection
+│   ├── quadtree/                    # Adaptive quadtree
+│   ├── planners/                    # Planner registry
+│   └── main.cpp                     # Experiment runner (TODO)
+├── tests/                           # C++ test suite
+│   ├── test_native_sanity.cpp       # ⭐ Native clash check
+│   └── ...
+├── analysis/analyze_states.py       # Python analysis (incomplete)
+└── README.md                        # This file
 ```
 
-Then use in config: `energy_model = MyEnergy`
+## Dependencies
+- C++17 compiler
+- CMake 3.10+
+- OMPL 1.5+
+- Boost (serialization, filesystem, system)
+- Eigen3
+- Python 3.7+ (NumPy, Matplotlib, Pandas, SciPy)
 
-## Milestone 1 Status
+## Known Issues
+1. **Native clashes**: Need radii_scale_factor ≤ 0.60 for 1UAO
+2. **Section 8**: Cell selection not exact percentile-rank formula
+3. **RRT**: No wrapper, range needs tuning
+4. **Experiments**: No runner, no controlled comparison yet
+5. **Analysis**: Python script incomplete
 
-### ✓ Completed
+## Next Steps (Priority Order)
+1. Fix Section 8 cell selection & steering (exact formula)
+2. Implement RRT baseline wrapper
+3. Build experiment runner (config, timing, storage)
+4. Tune parameters (run sanity check)
+5. Run controlled experiments (3 seeds × 3 policies)
+6. Write Python analysis script (all figures)
+7. Write report
 
-- [x] Git repository initialized
-- [x] CMake build system with CTest
-- [x] Core architecture:
-  - [x] `ProteinStateSpace`: Compound state space with SO2 components for φ/ψ angles
-  - [x] `ProbabilisticMotionValidator`: Metropolis-like acceptance with interpolation
-  - [x] `StateExporter`: CSV export with optional energy column
-  - [x] Component registries for planners, rules, and energy evaluators
-- [x] End-to-end test: Toy protein (2 residues × 2 SO2 angles)
-- [x] End-to-end test: Both `checkMotion` overloads verified
-- [x] End-to-end test: Stock planner generates nonempty graph
-- [x] End-to-end test: Save/reload with `PlannerDataStorage`
-- [x] End-to-end test: Export states and read in Python
-- [x] Configuration system with example file
-- [x] Python analysis script reads and verifies CSV format
-
-### 🔄 Deferred to Future Milestones
-
-The following are **intentionally not decided** for Milestone 1:
-
-- **Protein selection:** No specific PDB structure chosen
-- **Atom reconstruction:** Which atoms to reconstruct from φ/ψ angles
-- **Side chains:** Not modeled in current state space
-- **Energy function:** Test functions only; no OpenMM/PyRosetta integration
-- **State validity rules:** No production rules (angle bounds, clashes) implemented
-- **Production planners:** Only stock planners registered; no parameter tuning
-- **Visualization:** Energy landscape 2D projection deferred
-- **Goal definition:** No specific start/goal conformations
-
-## Development Notes
-
-### Test Data vs. Production
-
-All current tests use **synthetic test fixtures**:
-
-- 2-residue toy proteins
-- Simple quadratic/harmonic energy functions
-- Test-only planners and rules
-
-Production components (real proteins, OpenMM/PyRosetta, clash detection) remain separate and are not implemented in Milestone 1.
-
-### Component Registry Pattern
-
-The registry pattern allows selecting components by name in configuration:
-
-1. **Register** a factory function that creates the component
-2. **Configure** by specifying the name in the config file
-3. **Create** the component at runtime using the factory
-
-This pattern is used for:
-- Planners (`PlannerRegistry`)
-- State rules (`StateRuleRegistry`)
-- Energy evaluators (`EnergyEvaluatorRegistry`)
-
-### OMPL Integration Notes
-
-- State space uses `CompoundStateSpace` with `SO2StateSpace` subspaces
-- Each residue is a compound containing (φ, ψ) as separate SO2 components
-- Motion validator implements both required `checkMotion` overloads
-- `PlannerDataStorage` handles serialization transparently
-- SO2 angles wrap at 2π; comparison must account for wraparound
-
-## Troubleshooting
-
-### Build Errors
-
-**Problem:** `ompl/base/StateSpace.h: No such file or directory`
-
-**Solution:** Ensure OMPL is installed and CMake can find it:
+## Test Status
 ```bash
-pkg-config --modversion ompl
-pkg-config --cflags ompl
+$ ./tests/test_protein_folding
+✓ State space tests passed
+✓ Motion validator tests passed
+✓ Planner integration tests passed
+✓ Storage tests passed
+✓ Export tests passed
+✓ Protein reconstruction tests passed
+✓ Projection bounds tests passed
+✓ Native sanity check complete (repulsion=1881→463 with scale+exclude)
 ```
 
-**Problem:** `undefined reference to boost::serialization`
+## References
+- OMPL: https://ompl.kavrakilab.org/
+- PDB 1UAO: https://www.rcsb.org/structure/1UAO
+- Bondi radii: Bondi, A. (1964). J. Phys. Chem. 68(3), 441-451.
 
-**Solution:** Ensure Boost serialization is installed:
-```bash
-# Ubuntu/Debian
-sudo apt-get install libboost-serialization-dev
-
-# macOS
-brew install boost
-```
-
-### Runtime Errors
-
-**Problem:** `Unknown planner: XYZ`
-
-**Solution:** Check `PlannerRegistry::getRegisteredNames()` for available planners. Only RRT, RRTConnect, and PRM are registered by default.
-
-**Problem:** `Configuration error: num_residues must be at least 1`
-
-**Solution:** Ensure config file has valid `num_residues` value.
-
-## Next Steps
-
-After Milestone 1 approval, the following decisions are needed:
-
-### **DECISION REQUIRED: Protein Representation**
-
-**Question:** How should we represent the protein structure for real experiments?
-
-**Options:**
-
-1. **Full atomic model with OpenMM**
-   - Pros: Accurate energy, full physics simulation
-   - Cons: Slow, complex setup, requires PDB parsing
-   - Use case: Small proteins (<100 residues), detailed analysis
-
-2. **Coarse-grained backbone + side-chain approximation**
-   - Pros: Faster, still captures key interactions
-   - Cons: Less accurate energy, requires approximation models
-   - Use case: Larger proteins, rapid exploration
-
-3. **Backbone-only with simplified energy**
-   - Pros: Very fast, easy to implement
-   - Cons: Misses side-chain effects, unrealistic for many proteins
-   - Use case: Initial exploration, testing planners
-
-**Why this comes first:** The representation determines:
-- State space dimensionality (how many SO2/R3 components per residue)
-- Energy function requirements (OpenMM, PyRosetta, or custom)
-- Validity checking needs (clash detection, bond constraints)
-- Performance requirements (sampling speed, motion checking cost)
-
-**Recommendation:** Start with option 2 (coarse-grained) for 1NXB as suggested in the handout. This balances accuracy and speed for a ~100 residue protein.
-
-## License
-
-This is a course project for COMP/ELEC/MECH 450/550 (Algorithmic Robotics).
-
-## Authors
-
-- Raha and teammate (scientific decisions, experimental design)
-- Claude Code (software implementation, build system, testing infrastructure)
+---
+**Last Updated**: 2026-11-24  
+**Build Status**: ✅ Clean compilation, all tests passing  
+**Core Implementation**: Complete  
+**Experiments & Analysis**: Pending

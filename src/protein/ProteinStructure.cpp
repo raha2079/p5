@@ -4,6 +4,7 @@
 #include <stdexcept>
 #include <cmath>
 #include <algorithm>
+#include <iostream>
 #include <Eigen/Dense>
 
 // Amino acid three-letter to one-letter code map
@@ -79,13 +80,22 @@ ProteinStructure ProteinStructure::loadFromPDB(
 
     bool inTargetModel = false;
     bool modelFound = false;
+    bool hasModelRecords = false;  // Track if PDB has MODEL/ENDMDL structure
     int currentResidueNum = -1;
     Residue* currentResidue = nullptr;
 
     std::string line;
+    int lineNum = 0;
     while (std::getline(file, line)) {
+        lineNum++;
         if (line.substr(0, 5) == "MODEL") {
-            int model = std::stoi(line.substr(10, 4));
+            hasModelRecords = true;
+            std::string modelStr = line.substr(10);
+            // Trim whitespace
+            modelStr.erase(0, modelStr.find_first_not_of(' '));
+            modelStr.erase(modelStr.find_last_not_of(' ') + 1);
+            int model = std::stoi(modelStr);
+
             if (model == modelNum) {
                 inTargetModel = true;
                 modelFound = true;
@@ -97,8 +107,8 @@ ProteinStructure ProteinStructure::loadFromPDB(
                 break;  // End of target model
             }
         } else if (line.substr(0, 4) == "ATOM" || line.substr(0, 6) == "HETATM") {
-            // Only process if we're in the target model (or if no MODEL records)
-            if (!modelFound) {
+            // Only process if we're in the target model (or if no MODEL records exist)
+            if (!hasModelRecords) {
                 inTargetModel = true;  // No MODEL records, process all ATOMs
             }
 

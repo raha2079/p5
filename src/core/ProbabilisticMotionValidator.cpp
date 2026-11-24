@@ -6,14 +6,12 @@ ProbabilisticMotionValidator::ProbabilisticMotionValidator(
     const ob::SpaceInformationPtr& si,
     EnergyEvaluator energyEvaluator,
     unsigned int interpolationResolution,
-    double temperature,
-    double kB)
+    double tau)
     : ob::MotionValidator(si),
       energyEvaluator_(energyEvaluator),
       interpolationResolution_(interpolationResolution),
-      temperature_(temperature),
-      kB_(kB),
-      rng_(std::random_device{}()),
+      tau_(tau),
+      rng_(ompl::RNG::getSeed()),
       uniform_(0.0, 1.0) {
 
     if (!energyEvaluator_) {
@@ -22,21 +20,21 @@ ProbabilisticMotionValidator::ProbabilisticMotionValidator(
     if (interpolationResolution_ == 0) {
         throw std::invalid_argument("Interpolation resolution must be at least 1");
     }
-    if (temperature_ <= 0.0) {
-        throw std::invalid_argument("Temperature must be positive");
+    if (tau_ <= 0.0) {
+        throw std::invalid_argument("Tau must be positive");
     }
 }
 
 bool ProbabilisticMotionValidator::acceptStep(double energyFrom, double energyTo) const {
-    // Equal or downhill: always accept
+    // Equal or downhill: always accept (Section 4: E(c_i) >= E(c_{i+1}))
     if (energyTo <= energyFrom) {
         acceptedTransitions_++;
         return true;
     }
 
-    // Uphill: probabilistic acceptance
+    // Uphill: probabilistic acceptance (Section 4: exp(-(E_{i+1} - E_i) / τ))
     double deltaE = energyTo - energyFrom;
-    double probability = std::exp(-deltaE / (kB_ * temperature_));
+    double probability = std::exp(-deltaE / tau_);
     double random = uniform_(rng_);
 
     if (random < probability) {
@@ -50,6 +48,8 @@ bool ProbabilisticMotionValidator::acceptStep(double energyFrom, double energyTo
 
 bool ProbabilisticMotionValidator::checkMotion(
     const ob::State* s1, const ob::State* s2) const {
+
+    checkedMotions_++;
 
     // Allocate states for interpolation
     std::vector<ob::State*> states;
@@ -71,10 +71,21 @@ bool ProbabilisticMotionValidator::checkMotion(
         double energyFrom = energyEvaluator_(states[i]);
         double energyTo = energyEvaluator_(states[i + 1]);
 
+        // Track attempted energies for first few calls
+        if (attemptedEnergies_.size() < 10000) {
+            attemptedEnergies_.push_back(energyTo);
+        }
+
         if (!acceptStep(energyFrom, energyTo)) {
             valid = false;
             break;
         }
+    }
+
+    if (valid) {
+        validMotions_++;
+    } else {
+        invalidMotions_++;
     }
 
     // Free allocated states
@@ -88,6 +99,8 @@ bool ProbabilisticMotionValidator::checkMotion(
 bool ProbabilisticMotionValidator::checkMotion(
     const ob::State* s1, const ob::State* s2,
     std::pair<ob::State*, double>& lastValid) const {
+
+    checkedMotions_++;
 
     // Allocate states for interpolation
     std::vector<ob::State*> states;
@@ -111,12 +124,23 @@ bool ProbabilisticMotionValidator::checkMotion(
         double energyFrom = energyEvaluator_(states[i]);
         double energyTo = energyEvaluator_(states[i + 1]);
 
+        // Track attempted energies for first few calls
+        if (attemptedEnergies_.size() < 10000) {
+            attemptedEnergies_.push_back(energyTo);
+        }
+
         if (!acceptStep(energyFrom, energyTo)) {
             valid = false;
             lastValidIndex = i;
             break;
         }
         lastValidIndex = i + 1;
+    }
+
+    if (valid) {
+        validMotions_++;
+    } else {
+        invalidMotions_++;
     }
 
     // Copy the last valid state if motion was invalid

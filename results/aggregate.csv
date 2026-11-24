@@ -1,0 +1,4 @@
+planner,occupied_bins_mean,occupied_bins_std,num_states_mean,num_states_std,total_attempts_mean,total_attempts_std,acceptance_rate_mean,acceptance_rate_std,min_energy_mean,min_energy_std,median_energy_mean,median_energy_std,seed42_bins,seed43_bins,seed44_bins
+quadtree_energy,5.0000,0.0000,348.3333,49.7080,774.3333,42.4997,0.4466,0.0403,-1.9571,0.0168,-1.7829,0.0391,5,5,5
+quadtree_no_energy,5.0000,0.0000,345.0000,58.8784,751.6667,60.3895,0.4546,0.0426,-1.9718,0.0396,-1.7794,0.0486,5,5,5
+rrt,7.0000,0.0000,361.6667,15.8395,361.6667,15.8395,0.9972,0.0001,-1.8050,0.0275,-1.3748,0.0894,7,7,7

@@ -6,6 +6,7 @@ add_executable(test_protein_folding
     test_planner_integration.cpp
     test_storage.cpp
     test_export.cpp
+    test_protein_reconstruction.cpp
 )
 
 target_link_libraries(test_protein_folding

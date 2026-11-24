@@ -8,6 +8,7 @@ void runMotionValidatorTests();
 void runPlannerIntegrationTests();
 void runStorageTests();
 void runExportTests();
+void runProteinReconstructionTests();
 
 int main(int argc, char** argv) {
     std::cout << "Protein Folding - End-to-End Tests\n";
@@ -40,6 +41,11 @@ int main(int argc, char** argv) {
         if (runAll || testName == "export") {
             std::cout << "\n=== Export Tests ===\n";
             runExportTests();
+        }
+
+        if (runAll || testName == "protein") {
+            std::cout << "\n=== Protein Reconstruction Tests ===\n";
+            runProteinReconstructionTests();
         }
 
         std::cout << "\n✓ All requested tests passed!\n";

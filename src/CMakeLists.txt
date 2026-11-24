@@ -7,6 +7,8 @@ add_library(protein_folding_core
     planners/PlannerRegistry.cpp
     rules/StateRuleRegistry.cpp
     energy/EnergyEvaluatorRegistry.cpp
+    protein/ProteinStructure.cpp
+    protein/BackboneReconstruction.cpp
 )
 
 target_link_libraries(protein_folding_core

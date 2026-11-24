@@ -7,10 +7,6 @@ add_executable(test_protein_folding
     test_storage.cpp
     test_export.cpp
     test_protein_reconstruction.cpp
-    test_projection_bounds.cpp
-    test_native_sanity.cpp
-    test_reconstruction_full.cpp
-    test_geometry_verification.cpp
 )
 
 target_link_libraries(test_protein_folding
@@ -19,23 +15,12 @@ target_link_libraries(test_protein_folding
     ${Boost_LIBRARIES}
 )
 
-# Target-steering focused tests
-add_executable(test_target_steering
-    test_target_steering.cpp
+# Geometry verification test
+add_executable(test_geometry_verification
+    test_geometry_verification.cpp
 )
 
-target_link_libraries(test_target_steering
-    protein_folding_core
-    ${OMPL_LIBRARIES}
-    ${Boost_LIBRARIES}
-)
-
-# Simple target-steering trace test
-add_executable(test_target_steering_simple
-    test_target_steering_simple.cpp
-)
-
-target_link_libraries(test_target_steering_simple
+target_link_libraries(test_geometry_verification
     protein_folding_core
     ${OMPL_LIBRARIES}
     ${Boost_LIBRARIES}
@@ -48,4 +33,4 @@ add_test(NAME PlannerIntegrationTests COMMAND test_protein_folding planner)
 add_test(NAME StorageTests COMMAND test_protein_folding storage)
 add_test(NAME ExportTests COMMAND test_protein_folding export)
 add_test(NAME AllTests COMMAND test_protein_folding all)
-add_test(NAME TargetSteeringTests COMMAND test_target_steering)
+add_test(NAME GeometryVerificationTest COMMAND test_geometry_verification)

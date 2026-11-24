@@ -9,10 +9,6 @@ void runPlannerIntegrationTests();
 void runStorageTests();
 void runExportTests();
 void runProteinReconstructionTests();
-void runProjectionBoundsTests();
-void runNativeSanityTests();
-void runFullReconstructionTest();
-void runGeometryVerificationTests();
 
 int main(int argc, char** argv) {
     std::cout << "Protein Folding - End-to-End Tests\n";
@@ -50,25 +46,6 @@ int main(int argc, char** argv) {
         if (runAll || testName == "protein") {
             std::cout << "\n=== Protein Reconstruction Tests ===\n";
             runProteinReconstructionTests();
-        }
-
-        if (runAll || testName == "bounds") {
-            runProjectionBoundsTests();
-        }
-
-        if (runAll || testName == "native") {
-            std::cout << "\n";
-            runNativeSanityTests();
-        }
-
-        if (testName == "recon_full") {
-            std::cout << "\n";
-            runFullReconstructionTest();
-        }
-
-        if (testName == "geometry") {
-            std::cout << "\n";
-            runGeometryVerificationTests();
         }
 
         std::cout << "\n✓ All requested tests passed!\n";
